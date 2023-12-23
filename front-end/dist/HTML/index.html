@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/main.css" />
+    <link rel="stylesheet" href="../CSS/animations.css" />
+    <script src="../main.bundle.js" type="module" defer></script>
+    <script src="../class1.bundle.js" type="module" defer></script>
+    <script src="../class2.bundle.js" type="module" defer></script>
+    <script src="../buttons.bundle.js" type="module" defer></script>
+
+    <title>WEB2 Course project</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <!-- <div class="empty"></div> -->
+        <div class="title">
+          <button id="previous">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+            >
+              <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" />
+            </svg>
+          </button>
+          <h1>ARCHIVES OF</h1>
+          <button id="next">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+            >
+              <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
+            </svg>
+          </button>
+        </div>
+        <div class="rightUI">
+          <div class="topUI">
+            <input id="search" type="text" placeholder="Search..." />
+          </div>
+          <div class="bottomUI">
+            <input class="calendar" type="date" value="1939-09-01" />
+            <!-- <button id="calendar">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"
+                />
+              </svg>
+            </button> -->
+            <button id="addArticle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
+                />
+              </svg>
+            </button>
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="m354-247 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-80l65-281L80-550l288-25 112-265 112 265 288 25-218 189 65 281-247-149L233-80Zm247-350Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- <h2>Preserving the Legacy of WWII, day by day</h2> -->
+      </div>
+      <!-- <div class="buttons">
+        <button id="previous">PREVIOUS DAY</button>
+        <button id="next">NEXT DAY</button>
+      </div> -->
+      <!-- <div class="buttons">
+      </div> -->
+      <div class="selectedDate">
+        <h6 class="date">Saturday <span>9</span> december 1939</h6>
+      </div>
+
+      <!-- <div class="timelineWrapper">
+        <div class="timeline"></div>
+      </div> -->
+      <div class="mainContent">
+        <div class="leftBar">
+          <h4>
+            Day Month <br />
+            Year
+          </h4>
+        </div>
+        <div class="centralContent">
+          <div class="articles">
+            <ul class="articleList">
+              <!-- get filled by api (get htmlstring at JS\Article.js) -->
+            </ul>
+          </div>
+          <div class="extraInfo">
+            <div class="images">
+              <div class="cardTitle">
+                <h3>Images of the month</h3>
+              </div>
+              <div class="imgContainer">
+                <img src="../images/ww2-156-l.jpg" alt="" />
+              </div>
+            </div>
+            <div class="weather">
+              <div class="cardTitle">
+                <h3>Weather</h3>
+                <div class="temprature">
+                  <h1>11 °C</h1>
+                  <img src="../svg/icons/cloud.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rightBar">
+          <h4>
+            Day Month <br />
+            Year
+          </h4>
+        </div>
+        <div class="revealerRight"></div>
+        <div class="revealerLeft"></div>
+      </div>
+    </div>
+    <div class="blurBg"></div>
+    <div class="editBlurBg"></div>
+
+    <div class="addArticle">
+      <div class="inputFields">
+        <form id="form" action="">
+          <div class="inputContainer">
+            <div class="headline">
+              <label for="head">Headline</label>
+              <input class="formInput" type="text" id="head" name="headline" />
+            </div>
+            <div class="inputData">
+              <label for="date">Date</label>
+              <input
+                class="formInput"
+                type="date"
+                id="date"
+                name="date"
+                value="1939-09-01"
+              />
+            </div>
+          </div>
+          <label for="abstract">Abstract</label>
+          <textarea
+            class="formInput"
+            name="abstract"
+            id="abstract"
+            cols="1"
+            rows="5"
+          ></textarea>
+          <label for="main">Main article</label>
+          <textarea
+            class="formInput"
+            name="main"
+            id="main"
+            cols="30"
+            rows="5"
+          ></textarea>
+
+          <input id="submit" type="submit" value="Add article" />
+          <button id="cancel" type="button">Cancel</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="updateArticle">
+      <div class="editInputFields">
+        <form id="editForm" action="">
+          <div class="inputContainer">
+            <div class="headline">
+              <label for="head">Headline</label>
+              <input
+                class="editFormInput"
+                type="text"
+                id="editHead"
+                name="headline"
+              />
+            </div>
+            <div class="inputData">
+              <label for="date">Date</label>
+              <input
+                class="editFormInput"
+                type="date"
+                id="editDate"
+                name="date"
+                value="1939-09-01"
+              />
+            </div>
+          </div>
+          <label for="abstract">Abstract</label>
+          <textarea
+            class="editFormInput"
+            name="abstract"
+            id="editAbstract"
+            cols="1"
+            rows="5"
+          ></textarea>
+          <label for="main">Main article</label>
+          <textarea
+            class="editFormInput"
+            name="main"
+            id="editMain"
+            cols="30"
+            rows="5"
+          ></textarea>
+
+          <input id="editSubmit" type="submit" value="Update article" />
+          <button id="editCancel" type="button">Cancel</button>
+        </form>
+      </div>
+    </div>
+    <div class="requestLoader">
+      <div class="blurLoader"></div>
+      <h1 id="requestType">LOADING</h1>
+      <div class="spinner"></div>
+    </div>
+
+    <div class="loader">
+      <div class="loaderContent">
+        <div class="loaderTitle">
+          <h1>LOADING</h1>
+        </div>
+        <div class="spinner">
+          <div class="errorMessage"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

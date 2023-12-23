@@ -1,0 +1,26 @@
+/* .moveLeft {
+  animation: moveLeft 2s forwards;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-85vw);
+  }
+}
+
+.moveRight {
+  animation: moveRight 2s forwards;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(85vw);
+  }
+}
+ */
